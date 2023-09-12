@@ -1,0 +1,35 @@
+.bg-gray-900{
+    background-color: gray;
+}
+.profile-img{
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%
+}
+
+.title{
+    margin-left: 50px;
+}
+.social-container{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    padding: 25px 50px;
+}
+a.social{
+    padding: 0px 20px;
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+}
+a.social:hover{
+    transform: translateY(-2px);
+    
+}
+a.linkedin {
+    color: #fff;
+  }
+a.github {
+    color: #fff;
+} 
