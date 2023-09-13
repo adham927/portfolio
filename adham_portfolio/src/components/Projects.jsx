@@ -6,7 +6,7 @@ const Projects = () => {
   return (  
         <Box sx={{mt: {lg: "50px", xs: "35px"}, ml: {sm: "50px" }}} id='projects' className="text-gray-400 body-font" position="relative" p="5px">
            <Stack>
-            <Typography variant='h3'>
+            <Typography variant='h4'>
             Apps I've Built
             </Typography>
            </Stack>
@@ -17,9 +17,10 @@ const Projects = () => {
            >
             {project.title}
            </a>
-          
             ))}
-           </Stack>
+            
+        </Stack>
+           
         </Box>
 //     <section id="projects" className="text-gray-400 bg-gray-900 body-font">
 //     <div className="container px-5 py-10 mx-auto text-center lg:px-40">

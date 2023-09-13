@@ -10,7 +10,7 @@ export const projects = [
       title: "Portfolio",
       description:
       "Okay, this is the portfolio site that you check it now",
-      link: "https://reedbarger.com",
+      image: "../assets/images/portfolio_img",
+      link: "https://github.com/adham927/portfolio"
     }
-
   ];
