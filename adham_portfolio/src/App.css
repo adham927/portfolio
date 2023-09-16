@@ -7,9 +7,15 @@
     height: 200px;
     border-radius: 50%
 }
-
+.project-card {
+    transform: scale(1, 1);
+    transition: 0.3s all ease-in-out;
+  }
 .title{
     margin-left: 50px;
+}
+.projects{
+    background-color: '#0080ff';
 }
 .social-container{
     position: absolute;
