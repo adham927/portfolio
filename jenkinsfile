@@ -20,6 +20,7 @@
           when { branch "master" }
           steps {
               sh '''
+              cd adham_portfolio
               image="portfolio-repo:0.${BUILD_NUMBER}"
               aws ecr get-login-password --region $ECR_REGION | docker login --username AWS --password-stdin ${REGISTRY_URL}
               docker build -t ${image} .
