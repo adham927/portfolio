@@ -4,6 +4,7 @@ import Summary from '../components/Summary'
 import Projects from '../components/Projects'
 import Skill from '../components/Skill'
 import Contact from '../components/Contact'
+import Footer from '../components/Footer'
 import '../App.css'
 
 const MPage = () => {
@@ -14,6 +15,7 @@ const MPage = () => {
      <Projects />
      <Skill />
      <Contact />
+     <Footer />
     </div>
   )
 }

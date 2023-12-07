@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import {projects}  from './Data'
-import {Box, Stack, Typography} from '@mui/material'
+import {Box,Typography} from '@mui/material'
 
 const Projects = () => {
 
@@ -25,7 +25,7 @@ const Projects = () => {
              {project.image &&  <img 
                 width='150px'
                 height='150px'
-                src={project.image}
+                src={project.image} alt="fitness-projectd"
               />  } 
                <a
             href={project.link}

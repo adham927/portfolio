@@ -1,7 +1,7 @@
-FROM node:alpine
-WORKDIR /app
-COPY package.json ./
-COPY package-lock.json ./
+FROM node:18-alpine
+WORKDIR /app/
+COPY public/ /app/public
+COPY src/ /app/src
+COPY package.json /app/
 RUN npm install
-COPY ./ ./
 CMD ["npm", "start"]
