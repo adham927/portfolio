@@ -9,11 +9,11 @@
     }
     stages {
       stage('Portfolio-app - build'){
-          when { branch "master" }
+          when { branch "main" }
           steps {
               sh '''
               cd adham_portfolio
-              image="portfolio-repo:0.1"
+              image="portfolio-repo:0.${BUILD_NUMBER}"
               aws ecr get-login-password --region $ECR_REGION | docker login --username AWS --password-stdin ${REGISTRY_URL}
               docker build -t ${image} .
               docker tag ${image} ${REGISTRY_URL}/${image}
