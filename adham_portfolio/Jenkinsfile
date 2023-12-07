@@ -30,6 +30,7 @@ pipeline {
             docker tag ${image} ${REGISTRY_URL}/${image}
             docker push ${REGISTRY_URL}/${image}
             '''
+            
         }
     }
   }
