@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: portfolio-app
-        image: {{REGISTRY_URL}}/{{IMG_NAME}}
+        image: {{K8S_NAMESPACE/IMG_NAME}}
         imagePullPolicy: Never
         ports:
           - containerPort: 80             
