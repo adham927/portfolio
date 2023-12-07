@@ -32,24 +32,5 @@ pipeline {
             '''
         }
     }
-
-    stage('Portfolio-app - deploy'){
-        when { branch "master" }
-        steps {
-            sh '''
-            img_p_name="portfolio-repo:0.${BUILD_NUMBER}"
-
-            # replace registry url and image name placeholders in yaml
-            sed -i "s/{{REGISTRY_URL}}/$REGISTRY_URL/g" portfolio.yml
-            sed -i  "s/{{K8S_NAMESPACE/IMG_NAME}}/$K8S_NAMESPACE/$img_p_name/g" portfolio.yml
-
-            # get kubeconfig creds
-            aws eks --region ${K8S_CLUSTER_REGION} update-kubeconfig --name ${K8S_CLUSTER_NAME}
-
-            # apply to your namespace
-            kubectl apply -f portfolio.yml -n $K8S_NAMESPACE
-            '''
-        }
-    }
   }
 }
