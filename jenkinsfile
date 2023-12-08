@@ -9,9 +9,6 @@
         }
         stages {
           stage('Portfolio-app - build'){
-              when {
-                branch 'main'
-              }
               steps {
                   sh '''
                   cd adham_portfolio
