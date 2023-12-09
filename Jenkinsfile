@@ -14,10 +14,10 @@
                   sh '''
                   cd adham_portfolio
                   image="portfolio-repo:0.${BUILD_NUMBER}"
-                  aws ecr get-login-password --region $ECR_REGION | docker login --username AWS --password-stdin ${REGISTRY_URL}
-                  docker build -t ${image} .
-                  docker tag ${image} ${REGISTRY_URL}/${image}
-                  docker push ${REGISTRY_URL}/${image}
+                  aws ecr get-login-password --region $ECR_REGION |sudo docker login --username AWS --password-stdin ${REGISTRY_URL}
+                  sudo docker build -t ${image} .
+                  sudo docker tag ${image} ${REGISTRY_URL}/${image}
+                  sudo docker push ${REGISTRY_URL}/${image}
                   '''
               }
             }
