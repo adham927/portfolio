@@ -20,8 +20,6 @@
                   sudo docker push ${REGISTRY_URL}/${image}
                   docker push ${REGISTRY_URL}/${image}
                   '''
-
-
               }
             }
           }
