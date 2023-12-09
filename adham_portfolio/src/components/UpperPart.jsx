@@ -18,6 +18,7 @@ const UpperPart = () => {
       <Stack className='title'
     justifyContent="flex-start" flexWrap="wrap">
     
+
     
     <img src={PImage} alt="" className="profile-img"/>
   <Typography variant='h4' color='#fff' 
