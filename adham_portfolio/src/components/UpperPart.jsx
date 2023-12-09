@@ -4,7 +4,6 @@ import PImage from '../assets/images/profile.jpg'
 import '../App.css'
 import SocialFollow from "./SocialFollow"
 
-
 const UpperPart = () => {
   return (
     <Box 
