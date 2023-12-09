@@ -21,6 +21,7 @@
                   docker push ${REGISTRY_URL}/${image}
                   '''
 
+
               }
             }
           }
