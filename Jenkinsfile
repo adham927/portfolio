@@ -10,7 +10,6 @@
         stages {
           stage('Portfolio-app - build'){
               steps {
-                
                   sh '''
                   cd adham_portfolio
                   image="portfolio-repo:0.0.1"
