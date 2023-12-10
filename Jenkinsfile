@@ -7,13 +7,14 @@
             K8S_CLUSTER_NAME = 'es-cluster'
             K8S_CLUSTER_REGION = 'us-east-1'
           }
+          
           script {
             System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.HEARTBEAT_CHECK_INTERVAL", "86400");
           }
           stages {
             stage('Portfolio-app - build'){
                 steps {
-                  
+
                     sh '''
                     cd adham_portfolio
                     image="portfolio-repo:0.0.1"
