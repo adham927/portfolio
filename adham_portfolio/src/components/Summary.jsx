@@ -17,7 +17,6 @@ const Summary = () => {
         <Button variant="contained" color="info" href="#projects" sx={{backgroundColor:"ff2625", padding: "10px" , ml: {lg: "20px", xs: "10px"}}}>
          See my last work 
         </Button>
-
     </Box>
   )
 }
