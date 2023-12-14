@@ -22,6 +22,7 @@
                     image="portfolio-repo:0.0.${BUILD_NUMBER}"
                     aws ecr get-login-password --region us-east-1 | sudo docker login --username AWS --password-stdin 651956850093.dkr.ecr.us-east-1.amazonaws.com
                     sudo docker build -t ${image} .
+                    
                     sudo docker tag ${image} ${REGISTRY_URL}/${image}
                     sudo docker push ${REGISTRY_URL}/${image}
                     docker push ${REGISTRY_URL}/${image}
