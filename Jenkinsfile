@@ -14,9 +14,6 @@
           stages {
             stage('Portfolio-app - build'){
                 steps {
-                    script {
-                      System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.HEARTBEAT_CHECK_INTERVAL", "86400");
-                    }
                     sh '''
                     cd adham_portfolio
                     image="portfolio-repo:0.0.${BUILD_NUMBER}"
