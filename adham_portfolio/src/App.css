@@ -49,6 +49,7 @@ a.linkedin {
 a.github {
     color: #fff;
 } 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
