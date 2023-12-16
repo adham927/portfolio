@@ -12,13 +12,10 @@ pipeline {
       stages {
         stage('install dependences'){
           steps {
-               sh '''
-               cd adham_portfolio
-               npm install
-               '''       
+               sh 'npm install'
              }
           }
-          
+
         stage('Portfolio-app - build'){
           steps {
                sh '''
