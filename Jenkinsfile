@@ -1,6 +1,6 @@
 pipeline {
   agent any
-
+    tools { nodejs "nodejs" }
           // environment {
           //   REGISTRY_URL = '651956850093.dkr.ecr.us-east-1.amazonaws.com'
           //   ECR_REGION = 'us-east-1'
@@ -8,6 +8,7 @@ pipeline {
           //   K8S_CLUSTER_NAME = 'es-cluster'
           //   K8S_CLUSTER_REGION = 'us-east-1'
           // }
+
 
       stages {
         stage('install dependences'){
