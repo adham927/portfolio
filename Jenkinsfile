@@ -1,5 +1,6 @@
 pipeline {
   agent any
+
           // environment {
           //   REGISTRY_URL = '651956850093.dkr.ecr.us-east-1.amazonaws.com'
           //   ECR_REGION = 'us-east-1'
@@ -17,8 +18,6 @@ pipeline {
                '''       
              }
           }
-              
-
         stage('Portfolio-app - build'){
           steps {
                sh '''
