@@ -9,7 +9,6 @@ pipeline {
           //   K8S_CLUSTER_REGION = 'us-east-1'
           // }
 
-
       stages {
         stage('install dependences'){
           steps {
