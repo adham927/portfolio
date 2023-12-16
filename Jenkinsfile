@@ -1,5 +1,6 @@
 pipeline {
   agent any
+  tools { nodejs "node" }
           // environment {
           //   REGISTRY_URL = '651956850093.dkr.ecr.us-east-1.amazonaws.com'
           //   ECR_REGION = 'us-east-1'
@@ -12,10 +13,13 @@ pipeline {
       stages {
         stage('install dependences'){
           steps {
-               sh 'npm install'
+               sh '''
+               cd adham_portfolio
+               npm install
+               '''       
              }
           }
-
+          
         stage('Portfolio-app - build'){
           steps {
                sh '''
