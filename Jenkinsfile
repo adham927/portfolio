@@ -24,8 +24,6 @@ pipeline {
                '''
             }
           }
-
-
             // stage('MNIST Predictor - deploy'){
             //    steps {
             //       sh '''
