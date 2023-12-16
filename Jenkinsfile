@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  tools { nodejs "node" }
+  
           // environment {
           //   REGISTRY_URL = '651956850093.dkr.ecr.us-east-1.amazonaws.com'
           //   ECR_REGION = 'us-east-1'
