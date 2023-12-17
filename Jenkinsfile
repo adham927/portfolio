@@ -17,14 +17,14 @@ pipeline {
                sh '''
                cd adham_portfolio
                image="portfolio-repo:0.0.${BUILD_NUMBER}"
-               aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 651956850093.dkr.ecr.us-east-1.amazonaws.com
+               aws ecr get-login-password --region us-east-1 | sudo docker login --username AWS --password-stdin 651956850093.dkr.ecr.us-east-1.amazonaws.com
                docker build -t ${image} .
                docker tag ${image} ${REGISTRY_URL}/${image}
                docker push ${REGISTRY_URL}/${image} 
                '''
             }
           }
-          
+
             // stage('MNIST Predictor - deploy'){
             //    steps {
             //       sh '''
