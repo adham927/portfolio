@@ -8,8 +8,6 @@ pipeline {
           //   K8S_CLUSTER_NAME = 'es-cluster'
           //   K8S_CLUSTER_REGION = 'us-east-1'
           // }
-
-
       stages {
         stage('Portfolio-app - build'){
           steps {
