@@ -11,7 +11,6 @@ pipeline {
 
 
       stages {
-          
         stage('Portfolio-app - build'){
           steps {
                sh '''
@@ -24,7 +23,6 @@ pipeline {
                '''
             }
           }
-          
 
             // stage('MNIST Predictor - deploy'){
             //    steps {
