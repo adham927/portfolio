@@ -1,13 +1,13 @@
 pipeline {
   agent any
   
-          // environment {
-          //   REGISTRY_URL = '651956850093.dkr.ecr.us-east-1.amazonaws.com'
-          //   ECR_REGION = 'us-east-1'
-          //   K8S_NAMESPACE = 'default'
-          //   K8S_CLUSTER_NAME = 'es-cluster'
-          //   K8S_CLUSTER_REGION = 'us-east-1'
-          // }
+          environment {
+            REGISTRY_URL = '651956850093.dkr.ecr.us-east-1.amazonaws.com'
+            ECR_REGION = 'us-east-1'
+            K8S_NAMESPACE = 'default'
+            K8S_CLUSTER_NAME = 'es-cluster'
+            K8S_CLUSTER_REGION = 'us-east-1'
+          }
       stages {
         stage('Portfolio-app - build'){
           steps {
