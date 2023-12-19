@@ -23,25 +23,25 @@ pipeline {
           }
 
 
-            // stage('Portfolio-app - deploy'){
-            //    steps {
-            //       sh '''
-            //       cd adham_portfolio
-            //       img_p_name=portfolio-repo:0.${BUILD_NUMBER}
+            stage('Portfolio-app - deploy'){
+               steps {
+                  sh '''
+                  cd adham_portfolio
+                  img_p_name=portfolio-repo:0.${BUILD_NUMBER}
 
-            //       # replace registry url and image name placeholders in yaml
-            //       sed -i "s/{{REGISTRY_URL}}/$REGISTRY_URL/g" portfolio.yaml
-            //       sed -i  "s/{{K8S_NAMESPACE}}/$K8S_NAMESPACE/g" portfolio.yaml
-            //       sed -i  "s/{{IMG_NAME}}/$img_p_name/g" portfolio.yaml
+                  # replace registry url and image name placeholders in yaml
+                  sed -i "s/{{REGISTRY_URL}}/$REGISTRY_URL/g" portfolio.yaml
+                  sed -i  "s/{{K8S_NAMESPACE}}/$K8S_NAMESPACE/g" portfolio.yaml
+                  sed -i  "s/{{IMG_NAME}}/$img_p_name/g" portfolio.yaml
 
 
-            //       # get kubeconfig creds
-            //       aws eks --region ${K8S_CLUSTER_REGION} update-kubeconfig --name ${K8S_CLUSTER_NAME}
+                  # get kubeconfig creds
+                  aws eks --region ${K8S_CLUSTER_REGION} update-kubeconfig --name ${K8S_CLUSTER_NAME}
 
-            //       # apply to your namespace
-            //       kubectl apply -f portfolio.yaml -n $K8S_NAMESPACE
-            //       '''
-            //   }
-            // }
+                  # apply to your namespace
+                  kubectl apply -f portfolio.yaml -n $K8S_NAMESPACE
+                  '''
+              }
+            }
     }
   }
