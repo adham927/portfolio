@@ -40,6 +40,7 @@ pipeline {
                   # apply to your namespace
                   kubectl apply -f portfolio.yaml -n $K8S_NAMESPACE
                   '''
+                  
               }
             }
     }
