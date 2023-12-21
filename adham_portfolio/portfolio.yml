@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: portfolio-app
-        image: {{REGISTRY_URL/IMG_NAME}}
+        image: 651956850093.dkr.ecr.us-east-1.amazonaws.com/portfolio-repo:0.7
         imagePullPolicy: Never
         ports:
           - containerPort: 80             
