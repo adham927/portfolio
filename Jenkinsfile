@@ -32,7 +32,7 @@ pipeline {
                   sed -i  "s/{{K8S_NAMESPACE}}/$K8S_NAMESPACE/g" portfolio.yaml
                   sed -i  "s/{{IMG_NAME}}/$img_p_name/g" portfolio.yaml
             
-                  kubectl apply -f portfolio.yml -n $K8S_NAMESPACE
+                  kubectl apply -f portfolio.yaml -n $K8S_NAMESPACE
                   '''
               }
             }
