@@ -21,7 +21,6 @@ pipeline {
                '''
             }
           }
-        
             stage('Portfolio-app - deploy'){
                steps {
                   sh '''
