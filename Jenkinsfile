@@ -25,7 +25,7 @@ pipeline {
                steps {
                   sh '''
                   cd adham_portfolio
-                  IMAGE_URL=651956850093.dkr.ecr.us-east-1.amazonaws.com/portfolio-repo:0.${BUILD_NUMBER}
+                  IMAGE_URL=651956850093.dkr.ecr.us-east-1.amazonaws.com
                   # replace registry url and image name placeholders in yaml
                   sed  -i "s/{{REGISTRY_URL}}/$IMAGE_URL/g" portfolio.yml
                   sed  -i  "s/{{K8S_NAMESPACE}}/$K8S_NAMESPACE/g" portfolio.yml
