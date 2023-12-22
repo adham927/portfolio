@@ -25,11 +25,12 @@ pipeline {
                steps {
                   sh '''
                   cd adham_portfolio
-                  img_p_name=portfolio-repo:0.${BUILD_NUMBER}
+                  img_p_name="portfolio-repo:0.${BUILD_NUMBER}
 
                   # replace registry url and image name placeholders in yaml
-                  sed -i "s/'{{REGISTRY_URL}}/651956850093.dkr.ecr.us-east-1.amazonaws.com/$img_p_name'/g" portfolio.yml
-                  sed -i  "s/{{K8S_NAMESPACE}}/$K8S_NAMESPACE/g" portfolio.yml
+                 sed  "s/REGISTRY_URL/$REGISTRY_URL/g" portfolio.yml
+                 sed -i  "s/{{K8S_NAMESPACE}}/$K8S_NAMESPACE/g" portfolio.yml
+                 sed  "s/IMG_NAME/$img_p_name/g" portfolio.yml
             
                   kubectl apply -f portfolio.yml -n $K8S_NAMESPACE
                   '''
