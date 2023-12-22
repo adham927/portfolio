@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: portfolio-app
-  namespace: {{K8S_NAMESPACE}}
+  namespace: default
 spec:
   replicas: 1
   selector:
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: portfolio-app
-        image: {{REGISTRY_URL}}
+        image: '651956850093.dkr.ecr.us-east-1.amazonaws.com/portfolio-repo:0.7'
         imagePullPolicy: Never
         ports:
           - containerPort: 80             
