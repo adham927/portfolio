@@ -25,7 +25,7 @@ pipeline {
                steps {
                   sh '''
                   cd adham_portfolio            
-                  kubectl apply -f portfolio.yml -n $K8S_NAMESPACE
+                  kubectl apply -f portfolio.yml 
                   '''
               }
             }
