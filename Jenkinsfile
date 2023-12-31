@@ -27,6 +27,7 @@ pipeline {
                   cd adham_portfolio            
                   kubectl apply -f portfolio.yml 
                   '''
+                  
               }
             }
     }
