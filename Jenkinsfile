@@ -20,7 +20,6 @@ pipeline {
                docker push ${REGISTRY_URL}/${image} 
                '''
             }
-            
           }
             stage('Portfolio-app - deploy'){
                steps {
